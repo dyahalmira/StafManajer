@@ -15,12 +15,10 @@ Proyek ini relevan bagi beberapa pihak di dalam perusahaan:
   * **Staf HR/Admin:** Pihak yang bertanggung jawab langsung atas input, pembaruan, dan pemeliharaan data harian.
   * **Karyawan:** Pengguna akhir yang datanya dikelola oleh sistem ini dan dapat melihat informasi dasar untuk keperluan internal.
 
-### **Pengguna Aplikasi**
+### **Pengguna**
 
-Aplikasi ini membagi pengguna menjadi dua peran utama dengan hak akses yang berbeda, sehingga menjamin keamanan dan kerahasiaan data:
-
-  * **Admin:** Memiliki hak akses penuh untuk melakukan operasi **CRUD** (Create, Read, Update, Delete) pada data karyawan.
-  * **Staf:** Memiliki akses terbatas, hanya dapat **melihat** dan **mencari** data karyawan.
+  * **Admin:** Menyediakan opsi lengkap untuk **menambah** (Create), **mengubah** (Update), **menghapus** (Delete), **melihat**, dan **mencari** data karyawan.
+  * **Staf:** Menyediakan opsi terbatas hanya untuk **melihat** dan **mencari** data karyawan.
 
 -----
 
@@ -28,15 +26,29 @@ Aplikasi ini membagi pengguna menjadi dua peran utama dengan hak akses yang berb
 
 ### **Alur Utama**
 
-1.  Aplikasi dijalankan dan menampilkan menu utama dengan pilihan mode **Admin** atau **Staf**.
-2.  Pengguna **Admin** harus memasukkan *password* "admin" untuk otentikasi.
-3.  Menu akan disesuaikan dengan peran pengguna, menyediakan opsi yang relevan.
-4.  Pengguna dapat memilih opsi untuk keluar dari menu atau mengakhiri program.
+Program **StafManajer** didesain agar mudah dioperasikan. Cukup ikuti alur di bawah ini:
 
-### **Fungsionalitas**
+1.  **Mulai Program:** Jalankan skrip Python dari terminal.
+2.  **Pilih Mode Akses:** Saat program pertama kali berjalan, anda akan disajikan menu utama untuk memilih mode **Admin** atau **Staf**.
+3.  **Masuk ke Sistem:**
+    * Jika memilih **Admin**, anda akan diminta memasukkan *password* "admin" untuk otentikasi.
+    * Jika memilih **Staf**, anda akan langsung masuk ke menu tanpa *password*.
+4.  **Operasi Data:**
+    * **Admin:** Di menu Admin, anda bisa **menambah, melihat, mengubah, mencari dan menghapus** data karyawan. Cukup pilih angka yang sesuai dengan operasi yang anda inginkan.
+    * **Staf:** Di menu Staf, anda hanya bisa **melihat** atau **mencari** data karyawan.
+5.  **Keluar:** Pilih opsi `Keluar` di menu mana pun untuk mengakhiri program.
 
-  * **Mode Admin:** Menyediakan opsi lengkap untuk **menambah** (Create), **mengubah** (Update), **menghapus** (Delete), **melihat**, dan **mencari** data karyawan.
-  * **Mode Staf:** Menyediakan opsi terbatas hanya untuk **melihat** dan **mencari** data karyawan.
+----
+
+### **Teknologi dan Modul yang Digunakan**
+
+Program ini dibangun menggunakan dua jenis modul:
+
+* **Modul Eksternal:**
+    * **`tabulate`**: Modul ini berfungsi untuk mengubah data dari format *list of dictionaries* menjadi tabel yang rapi dan mudah dibaca langsung di terminal. Ini sangat membantu untuk menyajikan data karyawan secara profesional.
+* **Modul Bawaan Python:**
+    * Program ini menggunakan struktur data dasar Python seperti **List**, **Dictionary**, dan **Function** (fungsi).
+    * Fungsi-fungsi seperti `input()` untuk menerima masukan dan `print()` untuk menampilkan informasi adalah bagian integral dari program ini.
     
 -----
 
